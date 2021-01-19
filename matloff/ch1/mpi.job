@@ -1,0 +1,12 @@
+#!/bin/bash
+# use the bash shell
+#SBATCH -p RM
+#SBATCH -t 5:00
+#SBATCH -N 1
+#SBATCH --ntasks-per-node 2
+
+set -x
+
+#export I_MPI_JOB_RESPECT_PROCESS_PLACEMENT=0
+
+mpirun -np 2 ./PrimeFinder 1000000 0
