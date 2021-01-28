@@ -1,1 +1,1 @@
-Examples Pthreads programs
+Example Pthreads programs
