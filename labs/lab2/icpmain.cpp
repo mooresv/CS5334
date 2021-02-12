@@ -59,7 +59,7 @@ return(ptr);
 void *icpmalloc(size_t numBytes)
 {
 size_t mic_alignment = 64;
-void __attribute__((align(64))) *memptr = NULL;
+void __attribute__((aligned(64))) *memptr = NULL;
 int iret = posix_memalign( &memptr, mic_alignment, numBytes );
 if( iret != 0 ) printf("problem calling posix_memalign: %d\r\n",iret);
 return( memptr );
