@@ -17,7 +17,7 @@
 #include <math.h>
 #include <omp.h>
 
-# define NPOINTS 1000
+# define NPOINTS 2000
 # define MAXITER 1000
 
 struct d_complex{
@@ -38,7 +38,7 @@ int main(){
 //   Loop over grid of points in the complex plane which contains the Mandelbrot set,
 //   testing each point to see whether it is inside or outside the set.
 
-#pragma omp parallel for default(shared) private(j,c)
+#pragma omp parallel for default(shared) private(j,c) schedule(runtime)
    for (i=0; i<NPOINTS; i++) {
      for (j=0; j<NPOINTS; j++) {
        c.r = -2.0+2.5*(double)(i)/(double)(NPOINTS)+eps;
