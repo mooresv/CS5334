@@ -37,14 +37,14 @@ else {
    /* determine partner and then send/receive with partner */
    if (taskid < numtasks/2) {
      partner = numtasks/2 + taskid;
-     MPI_Ssend(&taskid, 1, MPI_INT, partner, 1, MPI_COMM_WORLD);
+     MPI_Send(&taskid, 1, MPI_INT, partner, 1, MPI_COMM_WORLD);
      MPI_Recv(&message, 1, MPI_INT, partner, 1, MPI_COMM_WORLD, &status);
      }
    else if (taskid >= numtasks/2) {
      partner = taskid - numtasks/2;
      //MPI_Recv(&message, 1, MPI_INT, partner, 1, MPI_COMM_WORLD, &status);
      MPI_Recv(&message, 1, MPI_INT, partner, 1, MPI_COMM_WORLD, &status);
-     MPI_Ssend(&taskid, 1, MPI_INT, partner, 1, MPI_COMM_WORLD);
+     MPI_Send(&taskid, 1, MPI_INT, partner, 1, MPI_COMM_WORLD);
      }
 
    /* print partner info and exit*/
