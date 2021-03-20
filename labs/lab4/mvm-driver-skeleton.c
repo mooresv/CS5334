@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-extern int MatrixVectorMultiply(int n, double *a, double *b, double *c, MPI_Comm comm);
+extern void MatrixVectorMultiply(int n, double *a, double *b, double *c, MPI_Comm comm);
 
 int main (int argc, char *argv[])
 {

@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-MatrixVectorMultiply(int n, double *a, double *x, double *y, MPI_Comm comm)
+void MatrixVectorMultiply(int n, double *a, double *x, double *y, MPI_Comm comm)
 {
     int i, j;
     int nlocal;         /* Number of locally stored rows of A */
