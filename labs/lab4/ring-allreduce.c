@@ -52,7 +52,7 @@ int main(){
   sum = 0;
 
   // Initialise local values to:
-  passon = (comm1d_cart_rank+1)*(comm1d_cart_rank+1);
+  passon = (coords[0]+1)*(coords[0]+1);
 
   // Use non-blocking point-to-point communication
 
