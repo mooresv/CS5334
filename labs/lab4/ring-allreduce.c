@@ -67,7 +67,7 @@ int main(){
   }
 
 
-  printf( "The sum is: %d on comm_world_rank %d, comm1d_rank %d comm1d_cart_rank %d\n",sum, comm_world_rank, comm1d_rank, comm1d_cart_rank);
+  printf( "The sum is: %d on comm_world_rank %d, comm1d_rank %d comm1d_cart_rank %d, comm1d_coord %d\n",sum, comm_world_rank, comm1d_rank, comm1d_cart_rank, coords[0]);
   MPI_Finalize();
 
 }
