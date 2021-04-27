@@ -155,8 +155,8 @@ void main(int argc, char *argv[]){
    } else{
       /* top and bottom rows */
 	//if (my2drank == 0)printf("exchanging top and bottom rows\n");
-        MPI_Sendrecv(&old[i2m][1], njnom, MPI_INT, below,  0, &old[0][1], nj-2, MPI_INT, above, 0, comm_2d, &status);
-        MPI_Sendrecv(&old[1][1],    njnom, MPI_INT, above,  1, &old[i2][1], nj-2, MPI_INT, below, 1, comm_2d, &status);
+        MPI_Sendrecv(&old[i2m][1], njnom, MPI_INT, below,  0, &old[0][1], njnom, MPI_INT, above, 0, comm_2d, &status);
+        MPI_Sendrecv(&old[1][1],    njnom, MPI_INT, above,  1, &old[i2][1], njnom, MPI_INT, below, 1, comm_2d, &status);
  
       /* left and right columns using column_type derived datatype */
 	//if (my2drank == 0)printf("exchanging left and right columns\n");
