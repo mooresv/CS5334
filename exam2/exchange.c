@@ -19,7 +19,7 @@ int main (int argc, char **argv)
 	MPI_Comm comm2d;
 	int my_comm2d_rank;
 	int left, right, above, below;
-	int matrix[64][64];
+	int matrix[N][N];
 	int i, j;
 	MPI_Datatype column_type;
 
